@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { ask } from './lib/api'
-import { fallbackCards } from './lib/match'
 import { useTodos } from './hooks/useTodos'
 import { SearchBar } from './components/SearchBar'
 import { CardView } from './components/CardView'
@@ -42,13 +41,7 @@ export default function App() {
   return (
     <div className="mx-auto flex min-h-dvh max-w-lg flex-col px-4 pb-10 pt-6">
       <header className="mb-5">
-        <div className="flex items-baseline gap-2">
-          <h1 className="text-xl font-semibold tracking-tight text-slate-900">CampusGuide</h1>
-          <span className="text-xs text-slate-400">校园事务助手</span>
-        </div>
-        <p className="mt-1 text-[13px] leading-relaxed text-slate-500">
-          不用知道去哪个网站、找哪个部门，说出你要办的事就行。
-        </p>
+        <h1 className="text-xl font-semibold tracking-tight text-slate-900">校园事务助手</h1>
       </header>
 
       <nav className="mb-5 flex gap-1 rounded-xl bg-slate-100 p-1">
@@ -107,14 +100,6 @@ export default function App() {
             </section>
           )}
 
-          {!result && (
-            <section className="space-y-3 pt-2">
-              <h2 className="px-1 text-xs font-semibold text-slate-500">常办事项</h2>
-              {fallbackCards().map((card) => (
-                <CardView key={card.id} card={card} onAddTodo={handleAddTodo} />
-              ))}
-            </section>
-          )}
         </main>
       ) : (
         <main className="flex-1">
