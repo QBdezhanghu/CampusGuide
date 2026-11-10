@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+    font-family:
+      system-ui,
+      -apple-system,
+      'PingFang SC',
+      'Microsoft YaHei',
+      'Noto Sans SC',
+      sans-serif;
+    /* 适配 iPhone 刘海与底部安全区 */
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-teal-500;
+  }
+}

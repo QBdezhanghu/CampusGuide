@@ -1,0 +1,15 @@
+{
+  "name": "CampusGuide 校园事务助手",
+  "short_name": "CampusGuide",
+  "description": "说出你要办的事，返回一张能照着走完的校园事务行动卡。",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0d9488",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon-maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
